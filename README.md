@@ -34,9 +34,11 @@
 
 	Example 1:
 
-+ Input: 
-  Products table:
++ Input:
+ 
+	  Products table:
 | product_id  | low_fats | recyclable |
+|-------------|----------|-----------|
 | 0           | Y        | N          |
 | 1           | Y        | Y          |
 | 2           | N        | Y          |
@@ -45,6 +47,7 @@
 
 + Output: 
 | product_id  |
+|-------------|
 | 1           |
 | 3           |
 
@@ -53,9 +56,10 @@
 
 2. `Find Customer Referee`
 
-+ Table: Customer
+	 Table: Customer
 
 | Column Name | Type    |
+|-------------|---------|
 | id          | int     |
 | name        | varchar |
 | referee_id  | int     |
@@ -74,9 +78,11 @@
 
 	Example 1:
 
-+ Input: 
-  Customer table:
++ Input:
+ 
+	Customer table:
 | id | name | referee_id |
+|----|------|------------|
 | 1  | Will | null       |
 | 2  | Jane | null       |
 | 3  | Alex | 2          |
@@ -86,6 +92,7 @@
 
 + Output: 
 | name |
+|------|
 | Will |
 | Jane |
 | Bill |
@@ -125,6 +132,7 @@ A country is big if:
 + Input: 
 	World table:
 | name        | continent | area    | population | gdp          |
+|-------------|-----------|---------|-----------|---------------|
 | Afghanistan | Asia      | 652230  | 25500100   | 20343000000  |
 | Albania     | Europe    | 28748   | 2831741    | 12960000000  |
 | Algeria     | Africa    | 2381741 | 37100000   | 188681000000 |
@@ -133,13 +141,17 @@ A country is big if:
 
 + Output: 
 | name        | population | area    |
+|-------------|------------|---------|
 | Afghanistan | 25500100   | 652230  |
 | Algeria     | 37100000   | 2381741 |
+
+
 4. `Article Views I`
 	
 	Table: Views
 
 | Column Name   | Type    |
+|---------------|---------|
 | article_id    | int     |
 | author_id     | int     |
 | viewer_id     | int     |
@@ -163,6 +175,7 @@ A country is big if:
 + Input: 
 	Views table:
 | article_id | author_id | viewer_id | view_date  |
+|------------|-----------|----------|------------|
 | 1          | 3         | 5         | 2019-08-01 |
 | 1          | 3         | 6         | 2019-08-02 |
 | 2          | 7         | 7         | 2019-08-01 |
@@ -173,6 +186,7 @@ A country is big if:
 
 + Output: 
 | id   |
+|------|
 | 4    |
 | 7    |
 
@@ -182,6 +196,7 @@ A country is big if:
 	Table: Tweets
 
 | Column Name    | Type    |
+|----------------|---------|
 | tweet_id       | int     |
 | content        | varchar |
 + tweet_id is the primary key (column with unique values) for this table.
@@ -198,14 +213,17 @@ A country is big if:
 
 	Example 1:
 
-+ Input: 
++ Input:
+
 	Tweets table:
 | tweet_id | content                          |
+|----------|---------------------------------|
 | 1        | Vote for Biden                   |
 | 2        | Let us make America great again! |
 
 + Output: 
 | tweet_id |
+|----------|
 | 2        |
 
 + Explanation: 
